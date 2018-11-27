@@ -12,7 +12,7 @@
 </ul>
 <hr />
 <h1>Third party libraries used</h1>
-<p>implementation 'com.google.android.gms:play-services-auth:16.0.1' implementation 'de.hdodenhof:circleimageview:2.2.0' implementation 'com.squareup.picasso:picasso:2.71828' implementation 'com.facebook.stetho:stetho:1.5.0' implementation 'android.arch.persistence.room:runtime:1.1.1' annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'</p>
+<p>implementation 'com.google.android.gms:play-services-auth:16.0.1'<br/> implementation 'de.hdodenhof:circleimageview:2.2.0'<br/> implementation 'com.squareup.picasso:picasso:2.71828' <br/>implementation 'com.facebook.stetho:stetho:1.5.0' implementation 'android.arch.persistence.room:runtime:1.1.1'<br/> annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'</p>
 <hr />
 <h1>External services</h1>
 <p>This app uses GoogleSignIn as an external service</p>
