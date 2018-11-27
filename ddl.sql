@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS `Coin`
+ (`coin_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  `coin_number` INTEGER NOT NULL,
+  `play_id` INTEGER NOT NULL,
+  `value` INTEGER NOT NULL,
+FOREIGN KEY(`play_id`) REFERENCES `Play`(`play_id`) ON UPDATE NO ACTION ON DELETE CASCADE );
+
+CREATE  INDEX `index_Coin_play_id` ON `Play` (`play_id`);
+
+CREATE TABLE IF NOT EXISTS `Play`
+ (`play_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  `ammount_won` INTEGER NOT NULL,
+  `outcome` INTEGER NOT NULL);
+
+CREATE UNIQUE INDEX `index_Play_play_id` ON `Play` (`play_id`);
+
+CREATE TABLE IF NOT EXISTS `User`
+ (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  `new_user` INTEGER NOT NULL,
+  `play_id` INTEGER NOT NULL,
+  `user_name` TEXT,
+  `time_played` INTEGER,
+  `coins` INTEGER NOT NULL);

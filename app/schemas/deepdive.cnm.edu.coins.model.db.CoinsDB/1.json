@@ -1,0 +1,163 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "1938ad8cbb0dfeff06b939e7205a779a",
+    "entities": [
+      {
+        "tableName": "Coin",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coin_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `coin_number` INTEGER NOT NULL, `play_id` INTEGER NOT NULL, `value` INTEGER NOT NULL, FOREIGN KEY(`play_id`) REFERENCES `Play`(`play_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "coinId",
+            "columnName": "coin_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coinNumber",
+            "columnName": "coin_number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playId",
+            "columnName": "play_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "coin_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Coin_play_id",
+            "unique": false,
+            "columnNames": [
+              "play_id"
+            ],
+            "createSql": "CREATE  INDEX `index_Coin_play_id` ON `${TABLE_NAME}` (`play_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Play",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "play_id"
+            ],
+            "referencedColumns": [
+              "play_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Play",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`play_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ammount_won` INTEGER NOT NULL, `outcome` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "playId",
+            "columnName": "play_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amountWon",
+            "columnName": "ammount_won",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outcome",
+            "columnName": "outcome",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "play_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Play_play_id",
+            "unique": true,
+            "columnNames": [
+              "play_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_Play_play_id` ON `${TABLE_NAME}` (`play_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `new_user` INTEGER NOT NULL, `play_id` INTEGER NOT NULL, `user_name` TEXT, `time_played` INTEGER, `coins` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "newUser",
+            "columnName": "new_user",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playId",
+            "columnName": "play_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "user_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timePlayed",
+            "columnName": "time_played",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coins",
+            "columnName": "coins",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"1938ad8cbb0dfeff06b939e7205a779a\")"
+    ]
+  }
+}
