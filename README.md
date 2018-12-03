@@ -37,3 +37,6 @@
 <hr />
 <h1>Instructions for build</h1>
 <p>Clone the repository into a local Android Studio or Intellij project.<br /> Build the app onto a device running a minimum of API 21</p>
+<hr/>
+<h1>JavaDocs</h1>
+<a href="https://github.com/ToraKaji/Coins/tree/master/docs/api">Link to JavaDocs</a>
