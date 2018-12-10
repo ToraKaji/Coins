@@ -20,9 +20,9 @@
 <h1>User stories</h1>
 <ul>
 <ul>
-<li>As a heavy Fortnite gamer I need something that can match the complexity of Fortnite.</li>
-<li>As a bored teenager I need something to curb my curiosity and draw out the dullness in life</li>
-<li>As a developer, I would like to see things I could improve upon within an app</li>
+<li>As a gamer, I want a game that challenges myself and makes keeps me entertained and happy. I want something that has a lot of user interaction as well as rewards hours into play.</li>
+<li>As a app developer I would like to see how this code is drawn out and what I could improve upon. Occasionally, I enjoy fixing other people's mistakes and submitting it back to them to help help the creator out. I feel this would be a good app, as I can already see things that have potential, but are sadly being neglected.</li>
+<li>I'm a teacher that would like something to show my students the mechanics of making a simple game. As this app seems fairly easy and fun, I would like to be able to teach my students and have a little fun in the process</li>
 </ul>
 </ul>
 <hr />
@@ -78,5 +78,9 @@ Facebook Stetho: https://github.com/facebook/stetho/blob/master/LICENSE
 <hr/>
 <h1>ERDs</h1>
 
-[JavaDoc](Coins ERD.pdf)
+[Coins ERD](Coins ERD.pdf)
 
+<hr/>
+<h1>WireFrame</h1>
+
+[WireFrame](Coins Wire Frame.png)
