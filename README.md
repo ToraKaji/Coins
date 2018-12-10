@@ -78,5 +78,5 @@ Facebook Stetho: https://github.com/facebook/stetho/blob/master/LICENSE
 <hr/>
 <h1>ERDs</h1>
 
-[JavaDoc](Coins ERD)
+[JavaDoc](Coins ERD.pdf)
 
