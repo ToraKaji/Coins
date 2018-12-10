@@ -40,10 +40,10 @@
 <hr/>
 <h1>JavaDocs</h1>
 
-[JavaDoc](docs/api)
+[JavaDoc](docs/api/index.html)
 
 <hr/>
 <h1>ERDs</h1>
 
-[JavaDoc](Coins ERD)
+[JavaDoc](Coins ERD.pdf)
 
