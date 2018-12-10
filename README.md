@@ -83,4 +83,4 @@ Facebook Stetho: https://github.com/facebook/stetho/blob/master/LICENSE
 <hr/>
 <h1>WireFrame</h1>
 
-[WireFrame](Coins Wire Frame.png)
+[WireFrame](Coins Wire Frame)
