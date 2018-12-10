@@ -30,7 +30,39 @@
 <p>CREATE TABLE IF NOT EXISTS `Coin` (`coin_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,<br /> `coin_number` INTEGER NOT NULL,<br /> `play_id` INTEGER NOT NULL,<br /> `value` INTEGER NOT NULL,<br /> <br />FOREIGN KEY(`play_id`) REFERENCES `Play`(`play_id`) ON UPDATE NO ACTION ON DELETE CASCADE ); <br /><br /> CREATE INDEX `index_Coin_play_id` ON `Play` (`play_id`); <br /> <br />CREATE TABLE IF NOT EXISTS `Play`<br /> (`play_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,<br /> `ammount_won` INTEGER NOT NULL,<br /> `outcome` INTEGER NOT NULL);<br /> <br />CREATE UNIQUE INDEX `index_Play_play_id` ON `Play` (`play_id`);<br /><br /> CREATE TABLE IF NOT EXISTS `User`<br /> (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,<br /> `new_user` INTEGER NOT NULL,<br /> `play_id` INTEGER NOT NULL,<br /> `user_name` TEXT,<br /> `time_played` INTEGER,<br /> `coins` INTEGER NOT NULL);</p>
 <hr />
 <h1>LICENCES</h1>
-<p><a href="https://github.com/hdodenhof/CircleImageView/blob/master/LICENSE.txt">CircleImageView</a></p>
+
+[License for coins](LICENSE)
+
+Google OAuth2:
+{ Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.}
+
+Picasso: 
+{ Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.}
+
+CircleImageView license: https://github.com/hdodenhof/CircleImageView/blob/master/LICENSE.txt
+
+Facebook Stetho: https://github.com/facebook/stetho/blob/master/LICENSE
+
 <hr />
 <h1>Instructions for play</h1>
 <p>Upon inital installation you will be brought to the welcome screen after you conitinue you will not be brought to that screen again. You will then be brought to the play history fragment. This will be blank as you have not yet played. If you click the drawer expansion button you will see "Penny Popper" this is the main game at the moment. Once you click it you will be brought to a screen with 9 coins. Click them at random to try and align 3 in a row, column, or diagonal. If you do you have aligned them, you will be rewarded with that value that you have aligned. The drawer expansion button will show you the current amount of coins you have available.</p>
@@ -39,6 +71,7 @@
 <p>Clone the repository into a local Android Studio or Intellij project.<br /> Build the app onto a device running a minimum of API 21</p>
 <hr/>
 <h1>JavaDocs</h1>
+
 
 [JavaDoc](docs/api/index.html)
 
