@@ -40,4 +40,10 @@
 <hr/>
 <h1>JavaDocs</h1>
 
-[JavaDoc](https://torakaji.github.io/Coins/docs/api/)
+[JavaDoc](docs/api)
+
+<hr/>
+<h1>ERDs</h1>
+
+[JavaDoc](Coins ERD)
+
